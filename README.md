@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## RSK Viem Demo
 
-First, run the development server:
+This is a Next.js project that shows how to use Viem to interact with deployed Rootstock (RSK) smart contacts.
+
+### Getting Started
+
+First, clone the repository and install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file in the root of the project to store your secrets:
+
+```bash
+NEXT_PUBLIC_RPC_URL='https://rpc.testnet.rootstock.io/<API_KEY>'
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x...
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can view and edit the code in:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `utils/viem.ts` - The logic for using Viem to connect with RSK contracts
+- `pages/index.tsx` - UI layer for interacting with the app
 
-## Learn More
+The app auto-updates as you edit the files.
 
-To learn more about Next.js, take a look at the following resources:
+### Learn More
 
+To learn more about Viem, Rootstock and Next.js, take a look at the following resources:
+
+- [Viem Documentation](https://viem.sh/docs/getting-started) - learn more about Viem and features
+- [Rootstock Documentation](https://dev.rootstock.io/) - learn more about the Rootstock layer-2 chain
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
